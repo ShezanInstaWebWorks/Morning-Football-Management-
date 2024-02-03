@@ -4,13 +4,16 @@ import { Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField } fr
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
+
+
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
 const Cost = () => {
   // const createUser=async()=>{}
-   const names=["Advance for Slot","Remaining for Slot","Football","Accessories","Other"];
+   const names=["Slot Booking","Advance for Slot","Remaining for Slot","Football","Accessories","Other"];
    const [open, setOpen] =useState(false)
    const usersCollectionRef=collection(db,"cost");
 

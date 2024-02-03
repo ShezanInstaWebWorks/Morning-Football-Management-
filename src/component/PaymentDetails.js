@@ -40,10 +40,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function PaymentDetails() {
   const { value } = useContext(NoteContext);
-  // console.log("fire",paymentDetails);
 
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -61,9 +60,14 @@ export default function PaymentDetails() {
       setPage(Math.max(0, Math.ceil(value.length / rowsPerPage) - 1));
     }
   }, [page, rowsPerPage, value.length]);
+
   const startIndex = page * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
-  const displayedRows = value.slice(startIndex, endIndex);
+
+  // Sort rows by date
+  const sortedRows = value.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const displayedRows = sortedRows.slice(startIndex, endIndex);
 
   return (
     <Box sx={{ padding: "0px 0px 0px 0px" }}>
@@ -111,7 +115,7 @@ export default function PaymentDetails() {
       </TableContainer>
       <br />
       <TablePagination
-        rowsPerPageOptions={[5,10,15]}
+        rowsPerPageOptions={[10,20,30]}
         variant="outlined"
         component="div"
         count={value.length}
@@ -121,10 +125,6 @@ export default function PaymentDetails() {
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
-      {/* <Pagination count={value.length} 
-      page={page} onChange={handleChangePage}
-      boundaryCount={1}
-       variant="outlined" shape="rounded" /> */}
     </Box>
   );
 }
