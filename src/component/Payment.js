@@ -9,7 +9,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const Payment = () => {
-   const names=["Emran Bhai","Rahul","Shezan","Mahadi","Tanveer","Shawon","Rakib","Fahim","Towmir","Niaz","Nasir","Asif"];
+   const names=["Emran Bhai","Captain Kader","Rahul","Shezan","Mahadi","Tanveer","Shawon","Rakib","Fahim","Towmir","Niaz","Nasir","Asif"];
    const [open, setOpen] = React.useState(false);
    const paymentsCollectionRef=collection(db,"payments");
 
