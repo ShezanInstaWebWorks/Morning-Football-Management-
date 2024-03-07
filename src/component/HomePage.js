@@ -67,37 +67,37 @@ function HomePage(props) {
       <Divider />
       <List >
         
-          <ListItem>
-          <ListItemButton onClick={()=>(
-            setColorPayment("green"),
-            setMobileOpen(false),
-            setColorCost(null),
-            setColorPaymentDetails(null),
-            setColorCostDetails(null),
-            setColorSavings(null),
-            setOpenPaymentDetails(false), 
-            setOpenCost(false),
-            setOpenPayment(true),setOpenCostDetails(false),setOpenSavings(false))}>
-          <PaidIcon sx={{marginRight:"8px",color:"green"}}/>
-          <Typography sx={{color:colorPayment}}>
-          Make Payment
-          </Typography>
-          </ListItemButton>
-          </ListItem>
-          <ListItem>
-          <ListItemButton onClick={()=>(
-            setMobileOpen(false),
-            setColorPayment(null),
-            setColorCost("green"),
-            setColorPaymentDetails(null),
-            setColorCostDetails(null),
-            setColorSavings(null),
-            setOpenPaymentDetails(false),setOpenCost(true),setOpenPayment(false),setOpenCostDetails(false),setOpenSavings(false))}>
-           <AddCardIcon sx={{marginRight:"8px",color:"red"}}/>
+          // <ListItem>
+          // <ListItemButton onClick={()=>(
+          //   setColorPayment("green"),
+          //   setMobileOpen(false),
+          //   setColorCost(null),
+          //   setColorPaymentDetails(null),
+          //   setColorCostDetails(null),
+          //   setColorSavings(null),
+          //   setOpenPaymentDetails(false), 
+          //   setOpenCost(false),
+          //   setOpenPayment(true),setOpenCostDetails(false),setOpenSavings(false))}>
+          // <PaidIcon sx={{marginRight:"8px",color:"green"}}/>
+          // <Typography sx={{color:colorPayment}}>
+          // Make Payment
+          // </Typography>
+          // </ListItemButton>
+          // </ListItem>
+          // <ListItem>
+          // <ListItemButton onClick={()=>(
+          //   setMobileOpen(false),
+          //   setColorPayment(null),
+          //   setColorCost("green"),
+          //   setColorPaymentDetails(null),
+          //   setColorCostDetails(null),
+          //   setColorSavings(null),
+          //   setOpenPaymentDetails(false),setOpenCost(true),setOpenPayment(false),setOpenCostDetails(false),setOpenSavings(false))}>
+          //  <AddCardIcon sx={{marginRight:"8px",color:"red"}}/>
            
-           <Typography sx={{color:colorCost}}>Add Cost</Typography>
-          </ListItemButton>
-          </ListItem>
+          //  <Typography sx={{color:colorCost}}>Add Cost</Typography>
+          // </ListItemButton>
+          // </ListItem>
           <ListItem>
           <ListItemButton onClick={(()=>(
             setColorPayment(null),
